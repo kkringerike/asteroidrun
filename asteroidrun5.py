@@ -8,7 +8,6 @@ display_width = 600
 display_height = 800
 
 # Farger
-white = (255,255,255)
 red = (255, 0, 0)
 
 gameDisplay = pygame.display.set_mode((600,800))
@@ -38,11 +37,11 @@ def drawBackground():
     gameDisplay.blit(bgImg, (0, 0))
 
 # Funksjon for å vise en stor tekst midt på skjermen
-def message_display(text):
+def messageDisplay(text):
     largeFont = pygame.font.Font('elektra.otf',65)
     textImage = largeFont.render(text, True, red)
     textRect = textImage.get_rect()
-    textRect.center = ((display_width/2),(display_height/2))
+    textRect.center = (display_width/2,100)
 
     gameDisplay.blit(textImage, textRect)
 
@@ -51,7 +50,7 @@ def message_display(text):
     time.sleep(2)
     
 def crash():
-    message_display("You Crashed!")
+    messageDisplay("You Crashed!")
 
 
 finished = False
@@ -102,4 +101,3 @@ while not finished:
     clock.tick(60)
 
 pygame.quit()
-quit()

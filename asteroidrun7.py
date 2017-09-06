@@ -36,7 +36,7 @@ def drawBackground():
     gameDisplay.blit(bgImg, (0, 0))
 
 # Funksjon for å vise en stor tekst midt på skjermen
-def message_display(text):
+def messageDisplay(text):
     largeFont = pygame.font.Font('elektra.otf',65)
     textImage = largeFont.render(text, True, red)
     textRect = textImage.get_rect()
@@ -59,7 +59,7 @@ def drawScore():
 
     
 def crash():
-    message_display("You Crashed!")
+    messageDisplay("You Crashed!")
 
 
 finished = False
@@ -153,4 +153,3 @@ while not finished:
     clock.tick(60)
 
 pygame.quit()
-#quit()

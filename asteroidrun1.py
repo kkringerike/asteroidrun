@@ -6,7 +6,7 @@ display_width = 600
 display_height = 800
 
 gameDisplay = pygame.display.set_mode((600,800))
-pygame.display.set_caption('Asteroid Boom')
+pygame.display.set_caption('Asteroid Run')
 
 clock = pygame.time.Clock()
 
@@ -16,7 +16,6 @@ bgImg = pygame.image.load("background.png")
 
 def drawShip(x, y):
     gameDisplay.blit(shipImg, (x - 0.5*shipImg.get_width(),y - 0.5*shipImg.get_height()))
-
 
 def drawBackground():
     gameDisplay.blit(bgImg, (0, 0))
@@ -36,4 +35,3 @@ while not finished:
         clock.tick(60)
 
 pygame.quit()
-#quit()

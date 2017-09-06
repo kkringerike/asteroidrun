@@ -35,11 +35,11 @@ def drawBackground():
     gameDisplay.blit(bgImg, (0, 0))
 
 # Funksjon for å vise en stor tekst midt på skjermen
-def message_display(text):
+def messageDisplay(text):
     largeFont = pygame.font.Font('elektra.otf',65)
     textImage = largeFont.render(text, True, red)
     textRect = textImage.get_rect()
-    textRect.center = ((display_width/2), 100)
+    textRect.center = (display_width/2,100)
 
     gameDisplay.blit(textImage, textRect)
 
@@ -48,7 +48,7 @@ def message_display(text):
     time.sleep(2)
     
 def crash():
-    message_display("You Crashed!")
+    messageDisplay("You Crashed!")
 
 
 finished = False
@@ -58,7 +58,7 @@ x_change = 0
 
 aster_x = random.randrange(0, display_width)
 aster_y = -200
-aster_speed = 10
+aster_speed = 7
 
 def checkCollision():
     # Regn ut grensene til skipet
@@ -135,4 +135,3 @@ while not finished:
     clock.tick(60)
 
 pygame.quit()
-quit()
