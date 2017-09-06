@@ -147,9 +147,10 @@ while not finished:
         aster_x = random.randrange(0, display_width)
         aster_y = -200
         score = 0
+        aster_speed = 7
 
     pygame.display.update()
     clock.tick(60)
 
 pygame.quit()
-quit()
+#quit()
